@@ -1,4 +1,6 @@
-﻿powercfg -restoredefaultschemes
+$ErrorActionPreference = "SilentlyContinue"
+ 
+powercfg -restoredefaultschemes
 
 $Balanced = (powercfg.exe /List | FINDSTR "(Balanced)")
 $BalancedGUID = ($Balanced.split(" "))[3]
